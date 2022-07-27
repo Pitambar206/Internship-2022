@@ -1,2 +1,2 @@
-# Internship-2022
+# Internship_2022
 ## Python Tasks
