@@ -1,7 +1,5 @@
 def is_leap(year):
     leap = False
-    
-    
     if year % 4==0:
         if year % 100==0:
             if year % 400==0:
@@ -12,11 +10,6 @@ def is_leap(year):
              leap =True
     else:
         leap = False
-        
-            
-                
-    
-    
     return leap
 
 year = int(input())
