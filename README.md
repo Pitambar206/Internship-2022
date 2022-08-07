@@ -1,4 +1,2 @@
-# Internship_2022
-## Python Task
-## App developement
+# Internship_2022.
 
