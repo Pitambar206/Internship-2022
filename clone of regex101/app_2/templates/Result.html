@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex101</title>
+</head>
+<body>
+    <form action ="{{ '/Result'}}" method="'post">
+      
+        <h1> Regex101.com</h1>
+        <p>
+            Regular Expression : {{ E }} <br>
+            Test String : {{ s }}
+        </p>
+
+        <h2> RESULT</h2>
+
+        {% if c>0 %}
+        {{ans}}<br>
+        <h4> Total Matches : {{c}}</h4>
+        <h4>Match Informations:</h4>
+        {% for span in spans %}<br>
+        {{span}}<br>
+        {% endfor %}
+        {% elif count==-1 %}
+         {% else %}
+        <h3>match not found</h3><br>
+        <h3> Total Matches :</h3>{{c}}<br>
+         {% endif %}
+
+
+        
+
+
+
+        
+
+
+
+    </body>
+</html>
