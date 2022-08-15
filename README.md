@@ -6,6 +6,8 @@
 * Basic Python String
 * Regex
 * Numpy(Both for Basic & Advance)
+* Descriptive Statistics
+
 
 ### Flask App Developement
 * Clone of Regex101.com
