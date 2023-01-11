@@ -1,0 +1,383 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: services available path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_me
+  - action: utter_choose_button
+  - intent: list_again
+  - action: utter_choose_button
+
+- story: protein_rich diet path
+  steps:
+  - intent: Diet_suggestions
+  - action: utter_diet_suggestion
+  - intent: protein_rich_diet
+  - action: utter_protein_rich_diet
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: healthy fats path
+  steps:
+  - intent: Diet_suggestions
+  - action: utter_diet_suggestion
+  - intent: healthy_fats
+  - action: utter_healthy_fats
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: fruits and vegetables path
+  steps:
+  - intent: Diet_suggestions
+  - action: utter_diet_suggestion
+  - intent: fruits_and_vegetables
+  - action: utter_fruits_and_vegetables
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: probiotics path
+  steps:
+  - intent: Diet_suggestions
+  - action: utter_diet_suggestion
+  - intent: probiotics
+  - action: utter_probiotics
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Super Fighter Vitamin C path
+  steps:
+  - intent: Diet_suggestions
+  - action: utter_diet_suggestion
+  - intent: Super_Fighter_Vitamin_C
+  - action: utter_super_fighter_vitamin_C
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Zinc Rich Foods path
+  steps:
+  - intent: Diet_suggestions
+  - action: utter_diet_suggestion
+  - intent: Zinc_Rich_Foods
+  - action: utter_zinc_rich_foods
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Selenium path
+  steps:
+  - intent: Diet_suggestions
+  - action: utter_diet_suggestion
+  - intent: Selenium
+  - action: utter_selenium
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Herbal Immune Boosters path
+  steps:
+  - intent: Diet_suggestions
+  - action: utter_diet_suggestion
+  - intent: Herbal_Immune_Boosters
+  - action: utter_herbal_immune_boosters
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO HEART
+  steps:
+  - intent: Disease_info
+  - action: utter_disease_info1
+  - intent: Heart_Disease
+  - action: utter_heart_disease
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO CORONA
+  steps:
+  - intent: Disease_info
+  - action: utter_disease_info1
+  - intent: Corona_Virus_Disease
+  - action: utter_corona_virus_disease
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO MALARIA
+  steps:
+  - intent: Disease_info
+  - action: utter_disease_info1
+  - intent: Malaria
+  - action: utter_malaria
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO CANCER
+  steps:
+  - intent: Disease_info
+  - action: utter_disease_info1
+  - intent: Cancer
+  - action: utter_cancer
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO TUBERCULOSIS
+  steps:
+  - intent: Disease_info
+  - action: utter_disease_info1
+  - intent: Tuberculosis
+  - action: utter_tuberculosis
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO CHIKUNGUNYA
+  steps:
+  - intent: Disease_info
+  - action: utter_disease_info1
+  - intent: Chikungunya
+  - action: utter_chikungunya
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO TYPHOID
+  steps:
+  - intent: Disease_info
+  - action: utter_disease_info1
+  - intent: Typhoid
+  - action: utter_typhoid
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO DIABETES
+  steps:
+  - intent: Disease_info
+  - action: utter_disease_info1
+  - intent: Diabetes
+  - action: utter_diabetes
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE INFO ASTHMA
+  steps:
+  - intent: Disease_info
+  - action: utter_disease_info1
+  - intent: Asthma
+  - action: utter_asthma
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE SYMPTOMS HEART
+  steps:
+  - intent: Disease_Symptoms
+  - action: utter_disease_symptoms1
+  - intent: Heart_Disease_Symp
+  - action: utter_heart_disease_symp
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE SYMPTOMS CORONA
+  steps:
+  - intent: Disease_Symptoms
+  - action: utter_disease_symptoms1
+  - intent: Corona_Virus_Disease_Symptoms
+  - action: utter_corona_virus_disease_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE SYMPTOMS MALARIA
+  steps:
+  - intent: Disease_Symptoms
+  - action: utter_disease_symptoms1
+  - intent: Malaria_Symptoms
+  - action: utter_malaria_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE SYMPTOMS CANCER
+  steps:
+  - intent: Disease_Symptoms
+  - action: utter_disease_symptoms1
+  - intent: Cancer_Symptoms
+  - action: utter_cancer_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE SYMPTOMS TUBERCULOSIS
+  steps:
+  - intent: Disease_Symptoms
+  - action: utter_disease_symptoms1
+  - intent: Tuberculosis_Symptoms
+  - action: utter_tuberculosis_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE SYMPTOMS CHIKUNGUNYA
+  steps:
+  - intent: Disease_Symptoms
+  - action: utter_disease_symptoms1
+  - intent: Chikungunya_Symptoms
+  - action: utter_chikungunya_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE SYMPTOMS TYPHOID
+  steps:
+  - intent: Disease_Symptoms
+  - action: utter_disease_symptoms1
+  - intent: Typhoid_Symptoms
+  - action: utter_typhoid_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE SYMPTOMS DIABETES
+  steps:
+  - intent: Disease_Symptoms
+  - action: utter_disease_symptoms1
+  - intent: Diabetes_Symptoms
+  - action: utter_diabetes_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: DISEASE SYMPTOMS ASTHMA
+  steps:
+  - intent: Disease_Symptoms
+  - action: utter_disease_symptoms1
+  - intent: Asthma_Symptoms
+  - action: utter_asthma_symptoms
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: cold_sym path
+  steps:
+  - intent: not_well
+  - action: utter_not_well
+  - action: utter_choose_symptom
+  - intent: cold_sym
+  - action: utter_cold_sym
+  - intent: cold_confirm
+  - action: utter_cold_med
+  - intent: med_helped
+  - action: utter_med_helped
+  - intent: med_not_helped
+  - action: utter_med_not_helped
+
+- story: well_&_not_well path
+  steps:
+  - intent: not_well
+  - action: utter_not_well
+  - intent: well
+  - action: utter_well
+
+- story: fever path
+  steps:
+  - intent: not_well
+  - action: utter_not_well
+  - action: utter_choose_symptom
+  - intent: fever_sym
+  - action: utter_fever_med
+  - action: utter_feedback
+  - intent: affirm
+  - action: utter_med_helped
+  - intent: med_not_helped
+  - action: utter_med_not_helped
+
+
+- story: fracture_sym path
+  steps:
+  - intent: not_well
+  - action: utter_not_well
+  - action: utter_choose_symptom
+  - intent: fracture_sym
+  - action: utter_fracture_sym
+  - intent: fracture_accepted
+  - action: utter_fracture_details
+  - intent: fracture_details
+  - action: utter_med_not_helped
+
+- story: headache path
+  steps:
+  - intent: not_well
+  - action: utter_not_well
+  - action: utter_choose_symptom
+  - intent: headache
+  - action: utter_headache_type
+  - intent: migrane
+  - action: utter_migrane
+  - intent: cluster_headache
+  - action: utter_cluster_headache
+  - intent: tension_headache
+  - action: utter_tension_headache
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: world_cases path
+  steps:
+  - intent: covid19_cases
+  - action: utter_covid19_cases
+  - intent: world_cases
+  - action: utter_world_cases
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: india_cases path
+  steps:
+  - intent: covid19_cases
+  - action: utter_covid19_cases
+  - intent: india_cases
+  - action: utter_india_cases
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+

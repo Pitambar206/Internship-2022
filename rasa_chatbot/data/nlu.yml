@@ -1,0 +1,602 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - morning
+    - hey there
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad    
+
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+    - what is your name?
+    - do you have a name for yourself?
+    - what do people call you
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - c ya
+    - i need to go
+    - i am going
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - right
+    - thats right
+    - you are right
+    - your are right
+    - nice prediction
+    - yes it helped me
+    - great! helped for me
+    - okay
+    
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - wrong
+
+- intent: user_thanks
+  examples: |
+    - thank you very much
+    - thanks for helping out
+    - thank you so much
+    - i am so thankful to you
+    - ok thanks
+    - thanks
+    - thank you
+    - o
+
+- intent: help_me
+  examples: |
+    - what can i get here
+    - show me your services
+    - services
+    - need info about healthcare
+    - i want to know about the services provided
+    - what does this chatbot do
+    - what can you do
+    - what all can I check here
+    - show me the services provided
+
+- intent: list_again
+  examples: |
+    - i want to choose again
+    - show me the options again
+    - give the list again
+    - i want the list again
+    - give me the option again
+    - give me list again
+    - can you go back to the buttons again?
+
+- intent: Disease_info
+  examples: |
+    - disease info
+    - diseaseinfo
+    - show information about diseases
+    - i want to know more about diseases
+    - can you explain more about the diseases
+
+- intent: Diet_suggestions
+  examples: |
+    - diet suggestions
+    - dietsuggestions
+    
+- intent: Disease_Symptoms
+  examples: |
+    - disease Symptoms
+    - diseaseSymptoms
+    - what can be various symptoms for the various diseases
+
+- intent: Heart_Disease
+  examples: |
+    - more info about heart disease
+    - something more about heart disease
+    - need info about cardiovascular diseases
+    - give information about heard diseases
+    - what is heart disease exactly?
+    - elaborate heart disease for me
+    - why does cardiac arrest occur?
+
+- intent: Corona_Virus_Disease
+  examples: |
+    - corona virus disease
+    - Novel corona virus info
+    - COVID
+    - what is corona virus
+    - want to know more about corona disease
+    - give information about corona
+    - what is covid-19?
+    - why is corona is dangerous?
+
+- intent: Malaria
+  examples: |
+    - what is malaria
+    - Malaria disease info
+    - information about malaria disease
+    - tell me more about malaria
+    - show information about malaria
+    - need to know about malaria
+
+- intent: Cancer
+  examples: |
+    - cancer info
+    - disease information of Cancer
+    - provide information about cancer
+    - i want to learn more about cancer
+    - tell me about cancer disease
+
+- intent: Tuberculosis
+  examples: |
+    - information about tuberculosis disease
+    - what is Tuberculosis?
+    - tell me more about tuberculosis
+    - provide information about tuberculosis
+    - i want to learn more about tuberculosis
+    - TB
+    - What is TB?
+
+- intent: Chikungunya
+  examples: |
+    - chikungunya disease info
+    - give information about Chikungunya disease
+    - provide information about chikungunya
+    - i want to learn more about chikungunya
+    - what is chikungunya disease
+
+- intent: Typhoid
+  examples: |
+    - typhoid disease information
+    - tell me something about Typhoid disease
+    - provide information about typhoid
+    - i want to learn more about typhoid
+    - something more about typhoid disease
+
+- intent: Asthma
+  examples: |
+    - asthma
+    - Asthma
+    - how is asthma caused
+    - tell me something about asthma
+    - show me information about the asthma
+    - is asthma a matter of concern
+
+- intent: Diabetes
+  examples: |
+    - diabetes
+    - Diabetes
+    - provide information about Diabetes
+    - can you tell me something on diabetes
+    - do you know anything about Diabetes
+
+# 2nd level
+# Intents for disease symptoms
+- intent: Heart_Disease_Symp
+  examples: |
+    - heart disease symptoms
+    - symptoms of heart disease
+    - heartdiease symptoms
+    - symptoms of cardio diseases
+    - what are symptoms for heart disease
+    - how do i know i have cardio vascular disease?
+    - common symptoms for heart diseases?
+    - give more information, data, facts, about heart problems
+
+- intent: Corona_Virus_Disease_Symptoms
+  examples: |
+    - corona virus disease symptoms
+    - coronavirus disease symptoms
+    - coronavirus symptoms
+    - corona virus symptoms
+    - give symptoms of covid-19
+    - show the symptoms of corona
+    - symptoms for noval corona virus
+
+- intent: Malaria_Symptoms
+  examples: |
+    - malaria symptoms
+    - Malaria symptoms
+    - give me symptoms of malaria
+    - show the symptoms of malaria
+    - what are different malaria symptoms
+    - symptoms of malaria
+
+- intent: Cancer_Symptoms
+  examples: |
+    - cancer symptoms
+    - Cancer symptoms
+    - give me symptoms of cancer
+    - show the symptoms of cancer
+    - different cancer symptoms
+    - symptoms of cancer
+
+- intent: Tuberculosis_Symptoms
+  examples: |
+    - tuberculosis symptoms
+    - Tuberculosis symptoms
+    - symptoms of tb
+    - what are TB symptoms
+    - show me symptoms of TB
+
+- intent: Chikungunya_Symptoms
+  examples: |
+    - chikungunya symptoms
+    - give the symptoms of Chikungunya
+    - show me symptoms of chikungunya
+    - what are symptoms of chikungunya
+    - disease symptoms of chikungunya
+    - symptoms of chikungunya
+
+- intent: Typhoid_Symptoms
+  examples: |
+    - typhoid symptoms
+    - give me symptoms of typhoid
+    - what are typhoid symptoms
+    - show me symptoms of typhoid
+    - disease symptoms of typhoid
+    - symptoms of typhoid
+
+- intent: Diabetes_Symptoms
+  examples: |
+    - diabetes symptoms
+    - give me symptoms of diabetes
+    - what are Diabetes symptoms
+    - show me symptoms of Diabetes
+    - disease symptoms of diabetes
+    - symptoms of diabetes
+
+- intent: Asthma_Symptoms
+  examples: |
+    - Asthma symptoms
+    - give me symptoms of asthma
+    - what are asthma symptoms
+    - show me symptoms of Asthma
+    - disease symptoms of asthma
+    - symptoms of asthma
+
+- intent: request_details
+  examples: |
+    - I want to fill the details form
+    - fill the details form 
+    - how to fill the details form
+    - my details
+
+- intent: my_name
+  examples: |
+    - my name is [Kusuma Challa]{"entity":"name"}
+    - [Gana Sai]{"entity":"name"} is my name
+    - [Vikash]{"entity":"name"} my name
+    - Here is my name [Rahul]{"entity":"name"}
+    - name [Venkat Prasad]{"entity":"name"}
+    - Iam [Pooja Challa]{"entity":"name"}
+    - [krishna challa]{"entity":"name"}
+    - [Sam Bank]{"entity":"name"}
+    - [Jasmin Brown]{"entity":"name"}
+    - [Kanav Bansal]{"entity":"name"}
+    - [Shikhar]{"entity":"name"}
+    - [Saksham]{"entity":"name"}
+    - [Lokesh Pasala]{"entity":"name"}
+    - [Ram Krishna]{"entity":"name"}
+
+- regex: name
+  examples: |
+    - [A-Z]+[a-z]+
+    
+- intent: mobile_number
+  examples: |
+    - my number is [9876543210]{"entity":"number"}
+    - [9876543210]{"entity":"number"} is my mobile number
+    - [9876543210]{"entity":"number"}
+    - [1234567890]{"entity":"number"}
+    - [1234567890]{"entity":"number"} is my mobile number
+    - here it is [8168276390]{"entity":"number"}
+    - yes this is my mobile number [9618697981]{"entity":"number"}
+    - [9816141231]{"entity":"number"}
+    
+- regex: number
+  examples: |
+    - \d{10}
+    
+- intent: my_age
+  examples: |
+    - my age is [32]{"entity":"age"}
+    - [18]{"entity":"age"} is my current age
+    - i am [20]{"entity":"age"} years old
+    - [21]{"entity":"age"} year old
+    - [30]{"entity":"age"} old
+    - [24]{"entity":"age"}
+    - i am [22]{"entity":"age"} years old
+    - [19]{"entity":"age"} is my age
+    
+- regex: age
+  examples: |
+    - \d{2}
+
+- regex: email
+  examples: |
+    - [\w!#$%&'/=?^.+*-]+@[\w.-]+$
+    
+    
+- intent: my_gender
+  examples: |
+    - i am [male]{"entity":"gender"}
+    - [female]{"entity":"gender"}
+    - my gender is [female]{"entity":"gender"}
+    - my gender is [M]{"entity":"gender"}
+    - [F]{"entity":"gender"}
+    - i am [O]{"entity":"gender"}
+    - I come under the gender [Other]{"entity":"gender"}
+    - [M]{"entity":"gender"}
+    - [male]{"entity":"gender"}
+
+- intent: my_email
+  examples: |
+    - my mail id is [abc@gmail.com]{"entity":"email"}
+    - [kusumachall77@gmail.com]{"entity":"email"} is my email
+    - here is my email address [challakusuma96@gmail.com]{"entity":"email"}
+    - my electronic mail id is [challapooja698@gmail.com]{"entity":"email"}
+    - my email address is [abc@gmail.com]{"entity":"email"}
+    - [kusumachall77@gmail.com]{"entity":"email"}
+    - note this as my active mail address [kusumachall77@gmail.com]{"entity":"email"}
+    - [venkateshchappa@yahoo.in]{"entity":"email"}
+
+- intent: not_well
+  examples: |
+    - I am not feeling well
+    - i feel sick
+    - i am sick
+    - i am not well
+
+- intent: well
+  examples: |
+    - i feel fine
+    - i am feeling fine
+    - i feel great
+    - i feel awesome
+
+- intent: med_not_helped
+  examples: |
+    - No, i am still not felling better after having benadryl.
+    - No, i am still not felling better after having crocin.
+    - i am not feeling better
+    - medicine did not helped me
+    - i am not feeling well
+    - No
+
+- intent: med_helped
+  examples: |
+    - medicine helped me
+    - i am feeling better now
+    - it was good medicine
+    - feeling good
+    - i am feeling better
+
+- intent: fever_sym
+  examples: |
+    - My body temperature has raised
+    - I am shivering
+    - I am feeling weak
+    - I have weakness in my body
+    - i am having fever
+    - fever
+
+- intent: cold_sym
+  examples: |
+    - I have a cough
+    - cough
+    - cold
+    - I have a cold
+    - My nose is choked
+    - nose choked
+    - My chest is aching
+    - chest pain
+    - My nose is itching
+    - nose itching
+    - My throat is itching
+    - throat itching
+
+- intent: cold_confirm
+  examples: |
+    - cold and cough 
+    - yes i am having cold and cough
+    - yes i am having cold
+    - yes i am having cough
+    - yes I have cold
+    - yes I have cold and cough
+    - yes Iam having cold
+    - yes,Iam having cold
+    - yes,i am having cold and cough
+
+- intent: fracture_sym
+  examples: |
+    - my hand is aching
+    - hand pain
+    - leg pain
+    - joint pain
+    - my leg is aching
+    - i have pain in hand
+    - my hand is paining
+    - my joint is aching
+
+- intent: fracture_details
+  examples: |
+    - it is a mild ache
+    - yes there is a swelling
+    - yes there is a physical deformity
+    - yes it is bleeding
+
+- intent: fracture_accepted
+  examples: |
+    - yes i think it is fracture
+    - yes it is hurting
+    - it is bleeding
+    - blood is coming out
+    - yes I was hurt
+    - it was hurting
+
+- intent: headache
+  examples: |
+    - i have a headache
+    - headache
+    - headche
+    - head pain
+    - i am having pain in forehead
+    - i have head pain
+    - pain in head
+
+- intent: migrane
+  examples: |
+    - i have a migrane headache
+    - migrane headache
+    - migrane
+
+- intent: cluster_headache
+  examples: |
+    - i have a cluster headache
+    - cluster headache
+    - cluster
+
+- intent: tension_headache
+  examples: |
+    - i have a tension headache
+    - tension headache
+    - tension
+
+- intent: protein_rich_diet
+  examples: |
+    - protein rich diet
+    - protein_rich diet
+    - proteinrich diet
+    - protein-rich diet
+
+- intent: healthy_fats
+  examples: |
+    - healthy fats
+    - healthyfats
+
+- intent: fruits_and_vegetables
+  examples: |
+    - fruits and vegetables 
+    - fruits&vegetables 
+    - fruits_and_vegatables
+
+- intent: probiotics
+  examples: |
+    - probiotics
+    - probiotics.
+
+- intent: Super_Fighter_Vitamin_C
+  examples: |
+    - Super Fighter Vitamin C
+    - super fighter vitamin c
+    - super fightervitamin c
+    - super fighter vitaminc
+
+- intent: Zinc_Rich_Foods
+  examples: |
+    - Zinc Rich Foods
+    - zinc rich foods
+    - zincrich foods
+
+- intent: Selenium
+  examples: |
+    - Selenium 
+    - selenium 
+
+- intent: Herbal_Immune_Boosters
+  examples: |
+    - Herbal Immune Boosters
+    - herbal immune boosters
+    - herbalimmune boosters
+
+- intent: covid19_cases
+  examples: |
+    - Covid19 cases in india 
+    - how many covid19 cases are there in india currently
+    - covid19 cases in india
+    - covid19 cases
+
+- intent: world_cases
+  examples: |
+    - world_cases 
+    - covid cases in the world 
+    - overall covid19 cases in the world 
+
+- intent: india_cases
+  examples: |
+    - india_cases 
+    - covid cases in India 
+    - overall covid19 cases in India 

@@ -1,0 +1,408 @@
+version: "3.1"
+
+intents:
+  - greet
+  - mood_unhappy
+  - mood_great
+  - bot_challenge
+  - goodbye
+  - affirm
+  - deny
+  - user_thanks
+  - help_me
+  - Disease_info
+  - Diet_suggestions
+  - Disease_Symptoms
+  - Heart_Disease
+  - Corona_Virus_Disease
+  - Malaria
+  - Cancer
+  - Tuberculosis
+  - Chikungunya
+  - Typhoid
+  - Asthma
+  - Diabetes
+  - Heart_Disease_Symp
+  - Corona_Virus_Disease_Symptoms
+  - Malaria_Symptoms
+  - Cancer_Symptoms
+  - Tuberculosis_Symptoms
+  - Chikungunya_Symptoms
+  - Typhoid_Symptoms
+  - Diabetes_Symptoms
+  - Asthma_Symptoms
+  - list_again
+  - not_well
+  - well
+  - fever_sym
+  - cold_sym
+  - cold_confirm
+  - fracture_sym
+  - fracture_details
+  - fracture_accepted
+  - headache
+  - migrane
+  - med_not_helped
+  - med_helped
+  - cluster_headache
+  - tension_headache
+  - request_details
+  - protein_rich_diet
+  - healthy_fats
+  - fruits_and_vegetables
+  - probiotics
+  - Super_Fighter_Vitamin_C
+  - Zinc_Rich_Foods
+  - Selenium
+  - Herbal_Immune_Boosters
+  - covid19_cases
+  - world_cases
+  - india_cases
+  - my_name
+  - mobile_number
+  - my_email
+  - my_age
+  - my_gender
+
+
+entities:
+  - name
+  - number
+  - email
+  - age
+  - gender
+
+slots:
+    name:
+      type: text
+      mappings:
+        - type: from_entity
+          entity: name
+    number:
+      type: any
+      mappings:
+        - type: from_entity
+          entity: number
+    email :
+        type: text
+        mappings:
+          - type: from_entity
+            entity: email
+    age:
+      type: any
+      mappings:
+        - type: from_entity
+          entity: age
+    gender:
+      type: any
+      mappings:
+        - type: from_entity
+          entity: gender
+          conditions:
+          - active_loop: user_details_form
+
+
+forms:
+    user_details_form:
+      required_slots:
+        - name
+        - number
+        - email
+        - age
+        - gender
+
+
+responses:
+
+  utter_greet:
+    - text: "Hey! How are you.How can I help?"
+    - text: Hi! How can I help?
+    - text: Hello! What are you looking for?
+
+  utter_happy:
+    - text: "Great, carry on!"
+    - text: Happy to help
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+    - text: Did I predict it right?
+
+  utter_goodbye:
+    - text: "Bye"
+    - text: Goodbye! Take care
+    - text: See Ya
+    - text: Enjoy your day!
+
+  utter_chitchat:
+    - text: "I am a Healthcare Assistant"
+
+  utter_sure_user_details:
+  - text: Sure! Please enter some details
+
+  utter_ask_name:
+  - text: Please mention your Full Name (eg- Kusuma Challa)
+
+  utter_ask_number:
+  - text: "{name}, please mention your Mobile Number:"
+
+  utter_ask_email:
+  - text: 'Please mention your Email id:'
+
+  utter_ask_age:
+  - text: 'Please enter your Age :'
+
+  utter_ask_gender:
+  - text: 'Please mention your Gender (M/F/O):'
+
+  utter_details_thanks:
+    - text: "These are the details you have entered !\nName: {Name}\nMobile number: {Mobile_number}\nEmail: {Email}\nAge:{Age}\nGender: {Gender}"
+
+  utter_user_Symptom_info:
+    - text: Tell me the symptoms you are facing
+
+  utter_choose_button:
+  - text: "Select what you are looking for"
+    buttons:
+    - title: "Not well"
+      payload: "/not_well"
+    - title: "Disease Info"
+      payload: "/Disease_info"
+    - title: "Diet Suggestions"
+      payload: " /Diet_suggestions"
+    - title: "Disease Symptoms"
+      payload: "/Disease_Symptoms"
+    - title: "covid19_cases"
+      payload: "/covid19_cases"
+
+  utter_choose_symptom:
+  - text: "Select what the symptom is?"
+    buttons:
+    - title: "fever_sym"
+      payload: "/fever_sym"
+    - title: "cold_sym"
+      payload: "/cold_sym"
+    - title: "fracture_sym"
+      payload: "/fracture_sym"
+    - title: "headache"
+      payload: "/headache"
+
+  utter_disease_symptoms1:
+  - text: "Select the disease for symptom: Or type the symptom other than specified below"
+    buttons:
+    - title: "Heart Disease Symptoms"
+      payload: "/Heart_Disease_Symp"
+    - title: "Corona Virus Disease Symptoms"
+      payload: '/Corona_Virus_Disease_Symptoms'
+    - title: "Malaria Symptoms"
+      payload: "/Malaria_Symptoms"
+    - title: "Cancer Symptoms"
+      payload: "/Cancer_Symptoms"
+    - title: "Tuberculosis Symptoms"
+      payload: "/Tuberculosis_Symptoms"
+    - title: "Chikungunya Symptoms"
+      payload: "/Chikungunya_Symptoms"
+    - title: "Typhoid Symptoms"
+      payload: "/Typhoid_Symptoms"
+    - title: "Diabetes Symptoms"
+      payload: "/Diabetes_Symptoms"
+    - title: "Asthma Symptoms"
+      payload: "/Asthma_Symptoms"
+
+  utter_disease_info1:
+  - text: "Select the disease you want to know about: Or type the disease other than specified below"
+    buttons:
+    - title: "Heart Disease"
+      payload: "/Heart_Disease"
+    - title: "Corona Virus Disease"
+      payload: "/Corona_Virus_Disease"
+    - title: "Malaria"
+      payload: "/Malaria"
+    - title: "Cancer"
+      payload: "/Cancer"
+    - title: "Tuberculosis"
+      payload: "/Tuberculosis"
+    - title: "Chikungunya"
+      payload: "/Chikungunya"
+    - title: "Typhoid"
+      payload: "/Typhoid"
+    - title: "Diabetes"
+      payload: "/Diabetes"
+    - title: "Asthma"
+      payload: "/Asthma"
+
+  utter_diet_suggestion:
+  - text: "Select your goal"
+    buttons:
+    - title: "protein_rich diet"
+      payload: "/protein_rich_diet"
+    - title: "healthy_fats"
+      payload: "/healthy_fats"
+    - title: "fruits&vegetables"
+      payload: "/fruits_and_vegetables"
+    - title: "probiotics"
+      payload: "/probiotics"
+    - title: "Super_Fighter_Vitamin C"
+      payload: "/Super_Fighter_Vitamin_C"
+    - title: "Zinc_Rich Foods"
+      payload: "/Zinc_Rich_Foods"
+    - title: "Selenium"
+      payload: "/Selenium"
+    - title: "Herbal_Immune_Boosters"
+      payload: "/Herbal_Immune_Boosters"
+
+  utter_covid19_cases:
+  - text: "If you want to know covid cases at present ,select one option?"
+    buttons:
+    - title: "world_cases"
+      payload: "/world_cases"
+    - title: "india_cases"
+      payload: "/india_cases"
+
+  utter_world_cases:
+  - text: "Refer the link: https://covid19.who.int/"
+
+  utter_india_cases:
+  - text: "Refer the link: https://www.who.int/countries/ind/"
+
+  utter_protein_rich_diet:
+  - text: "\n1.Adequate protein intake is required to prevent muscle loss and maintain metabolic functions. Loss of muscle can lead to weakness, fatigue, and inability to perform daily activities.
+          \n2.Vegetarians can include 2-3 servings/day of pulses, dal, soya, milk & milk products, nuts, and seeds. Also besan, sattu, khichdi, peanut, paneer, curd, and mushrooms are good options.
+          \n3. Non-vegetarians can include all of these along with lean meat like eggs, chicken, and fish in their diet."
+
+  utter_healthy_fats:
+  - text: "\n1.Reduce intake of excessive fat and opt for cooking methods that require less or no fat, such as steaming, grilling, or sautéing instead of frying foods. Choose foods that contain healthy sources of unsaturated fats, like fish and nuts. 
+          \n2.To limit saturated fats, trim excess fat from meat and poultry and opt for skinless options. Scale back on foods like red and fatty meats, butter and full-fat dairy products, palm oil, shortening, and lard. Avoid including trans fats in your meals as much as possible."
+
+  utter_fruits_and_vegetables:
+  - text: "\n1.Vitamins, minerals, and antioxidants present in colorful fruits, and vegetables facilitate a speedy recovery. Try to include at least 5-6 servings of fruits and vegetables daily meal plan. You can add fruits to your milkshakes or smoothies and consume seasonal vegetables in forms such as cooked, sautéed, steamed, or boiled. 
+            \n2.Note: Ensure raw produce is cleaned well and proper hygiene is followed."
+
+  utter_probiotics:
+  - text: "\n1.probiotics can help boost the immune system. Healthy bacteria found in probiotics will help the gut and intestinal tract fight off disease-causing germs
+            \n2.Yogurt, kefir, pickles, kimchi, and kombucha are loaded with probiotics."
+
+  utter_super_fighter_vitamin_C:
+  - text: "\n1.Vitamin C protects you from infection by stimulating the formation of antibodies and boosting immunity. As an antioxidant, vitamin C fights free radicals present in the body.
+          \n2.Include more vitamin C in your diet with citrus fruits like oranges, grapefruit, and tangerines, or red bell pepper, papaya, strawberries, tomatoes, guavas, broccoli, kiwi, and chilies."
+
+  utter_zinc_rich_foods:
+  - text: "\n1.Adequate zinc is crucial for the development and function of the immune system and may help wounds to heal. 
+            \n2.Zinc rich can be found in lean meat, poultry, seafood, milk, whole grain products, beans, pumpkin seeds, and nuts."
+
+  utter_selenium:
+  - text: Eggs contain selenium, a powerful antioxidant that plays a key role in cell health. Other sources include seafood, Brazil nuts, pumpkin seeds, grains, and dairy products.
+
+  utter_herbal_immune_boosters:
+  - text: "\n1.A lot of herbs and spices can be used during this phase due to their potential for possessing anti-inflammatory, antioxidant, and antiviral properties.
+            \n2.Kadha – Suggested by the Ministry of AYUSH containing spices like cloves, dry ginger, and black pepper decoction for boosting immunity.
+            \n3.Turmeric milk with black pepper – Suggested due to its pro-inflammatory and immune properties
+            \n4.Herbs – Like mint, tulsi, basil made into teas help with antioxidants, improving taste, digestion, and immunity."
+
+  utter_heart_disease:
+  - text: Cardiovascular diseases (CVDs) are the leading cause of death globally.Heart attacks and strokes are usually acute events and are mainly caused by a blockage that prevents blood from flowing to the heart or brain. The most common reason for this is a build-up of fatty deposits on the inner walls of the blood vessels that supply the heart or brain. Strokes can be caused by bleeding from a blood vessel in the brain or from blood clots.
+
+  utter_corona_virus_disease:
+  - text: Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.The best way to prevent and slow down transmission is to be well informed about the COVID-19 virus, the disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face.
+
+  utter_malaria:
+  - text: Malaria is a life-threatening disease caused by parasites that are transmitted to people through the bites of infected female Anopheles mosquitoes. It is preventable and curable. There are 5 parasite species that cause malaria in humans, and 2 of these species – Plasmodium falciparum and Plasmodium vivax – pose the greatest threat.
+
+  utter_cancer:
+  - text: Cancer is a generic term for a large group of diseases that can affect any part of the body. Other terms used are malignant tumours and neoplasms. One defining feature of cancer is the rapid creation of abnormal cells that grow beyond their usual boundaries, and which can then invade adjoining parts of the body and spread to other organs; the latter process is referred to as metastasis. Metastases are  the primary cause of death from cancer.
+
+  utter_tuberculosis:
+  - text: TB is caused by bacteria (Mycobacterium tuberculosis) and it most often affects the lungs. TB is spread through the air when people with lung TB cough, sneeze or spit. A person needs to inhale only a few germs to become infected.
+
+  utter_chikungunya:
+  - text: Chikungunya is a mosquito-borne viral disease that causes fever and severe joint pain. The disease was first recognized in 1952 during an outbreak in southern Tanzania. It is a ribonucleic acid (RNA) virus that belongs to the alphavirus genus of the family Togaviridae. The name “chikungunya” derives from a word in the Kimakonde language of southern Tanzania, meaning “to become contorted”, and describes the stooped appearance of sufferers with joint pain (arthralgia).
+
+  utter_typhoid:
+  - text: Typhoid fever is a life-threatening systemic infection caused by the bacterium Salmonella enterica serovar Typhi (commonly known as Salmonella Typhi). Typhoid is usually spread through the ingestion of contaminated food or water.
+
+  utter_diabetes:
+  - text: Diabetes is a chronic, metabolic disease characterized by elevated levels of blood glucose (or blood sugar), which leads over time to serious damage to the heart, blood vessels, eyes, kidneys and nerves. The most common is type 2 diabetes, usually in adults, which occurs when the body becomes resistant to insulin or doesn't make enough insulin.
+
+  utter_asthma:
+  - text: Asthma is a long-term condition affecting children and adults. The air passages in the lungs become narrow due to inflammation and tightening of the muscles around the small airways.
+
+  utter_heart_disease_symp:
+  - text: "Often, there are no symptoms of the underlying disease of the blood vessels. A heart attack or stroke may be the first sign of underlying disease. Symptoms of a heart attack include\n1)pain or discomfort in the centre of the chest;\n2)pain or discomfort in the arms, the left shoulder, elbows, jaw, or back."
+
+  utter_corona_virus_disease_symptoms:
+  - text: "1)Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.\n2)Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness."
+
+  utter_malaria_symptoms:
+  - text: "Symptoms for the Malaria Disease are as follows.....\n1)The first symptoms – fever, headache, and chills – may be mild and difficult to recognize as malaria.\n2)If not treated within 24 hours, Plasmodium falciparum malaria can progress to severe illness, and lead to death."
+
+  utter_cancer_symptoms:
+  - text: "Symptoms for the Cancer Disease are as follows.....\n1)Fatigue\n2)Lump or area of thickening that can be felt under the skin\n3)Weight changes, including unintended loss or gain\n4)Skin changes, such as yellowing, darkening or redness of the skin, sores that won't heal, or changes to existing moles\n5)Changes in bowel or bladder habits\n6)Persistent cough or trouble breathing."
+
+  utter_tuberculosis_symptoms:
+  - text: "Symptoms for the Tuberculosis Disease are as follows.....\n1)Prolonged cough\n2)Chest pain\n3)Weakness or fatigue\n4)Weight loss\n5)Fever\n6)Night sweats"
+
+  utter_chikungunya_symptoms:
+  - text: "Symptoms for the Chikungunya Disease are as follows.....\n1)Muscle pain\n2)Headache\n3)Nausea\n4)Fatigue and rash"
+
+  utter_typhoid_symptoms:
+  - text: "Symptoms for the typhoid Disease are as follows.....\n1)Prolonged high fever\n2)Fatigue, headache, nausea\n3)Abdominal pain\n4)constipation or diarrhoea\n5)Rash in some cases"
+
+  utter_diabetes_symptoms:
+  - text: "Diabetes of all types can lead to complications in many parts of the body and can increase the overall risk of dying prematurely.\n1)Possible complications include kidney failure, leg amputation, vision loss and nerve damage.\n2)Adults with diabetes also have two- to three-fold increased risk of heart attacks and strokes.\n3)In pregnancy, poorly controlled diabetes increases the risk of fetal death and other complications."
+
+  utter_asthma_symptoms:
+  - text: "Common symptoms for Asthma can be:\n1)Cough\n2)Wheeze\n3)Shortness of breath and chest tightness."
+
+#  utter_thanks:
+#    - text: Thank You for providing the details
+  utter_feedback:
+  - text: "Let me know if you are feeling better."
+
+  utter_not_well:
+  - text: "Okay, can you tell me what's wrong? what are your symptoms?"
+
+  utter_well:
+  - text: "Great to know. how can i assist you then?"
+
+  utter_fever_med:
+  - text: "This is a symptom of fever, you should take a tablet of crocin after you have your meal."
+
+  utter_cold_sym:
+  - text: "Okay, this is a symptom of cold, do you have cold?"
+
+  utter_cold_med:
+  - text: "You should take a spoon full of benadryl after your meal."
+
+  utter_med_helped:
+  - text: "Ok, so better to carry on medicine for 2 more days."
+
+  utter_med_not_helped:
+  - text: "Ok, you should consult a doctor."
+
+  utter_fracture_sym:
+  - text: "Okay, did you get hurt, or it is a sudden aching."
+
+  utter_fracture_details:
+  - text: "Ok, is there a swelling or a physical deformity or bleeding at the aching region."
+
+  utter_headache_type:
+  - text: "What kind of headache do you have :\n 1. Migrane headache- intense throbbing pain on just 1 side of head.\n2. Cluster headaches- severe and recurrent headaches.\n3. Tension Headache- Ocassional."
+
+  utter_migrane:
+  - text: "Symptom noted. Migraines tend to be recurrent, and each attack may last up to 3 days otherwise consult to doctor."
+
+  utter_cluster_headache:
+  - text: "Symptom noted. Attacks tend to occur in daily clusters that can persist for weeks or months. They typically take place at the same time of day, which can often be a couple of hours after falling asleep at night. Better to consult to doctor."
+
+  utter_tension_headache:
+  - text: "Symptom noted. The cause of tension headaches is unclear, but stress, anxiety, and depression are common triggers. If it happens regularly then consult to doctor."
+
+actions:
+- action_submit
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
